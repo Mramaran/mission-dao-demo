@@ -10,7 +10,9 @@ export function nearToYocto(near) {
 
 /** Converts yoctoNEAR to a NEAR amount string, trimming trailing zeros. */
 export function yoctoToNear(yocto) {
-  const s = String(yocto).padStart(DECIMALS + 1, "0");
+  const str = String(yocto).trim();
+  if (!/^\d+$/.test(str)) throw new Error("yocto must be a non-negative whole number");
+  const s = str.padStart(DECIMALS + 1, "0");
   const whole = s.slice(0, -DECIMALS);
   const frac = s.slice(-DECIMALS).replace(/0+$/, "");
   return frac ? `${whole}.${frac}` : whole;
