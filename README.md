@@ -1,6 +1,7 @@
 # mission-dao-demo
 
-A tiny unit-conversion library used as the live demo repo for **Mission DAO**: an AI agent that rewards valid merged pull requests with testnet NEAR (at most 2 per contributor in a review window; trivial changes earn nothing).
+A tiny unit-conversion library used as the live demo repo for **Mission DAO**:
+an AI agent that rewards valid merged pull requests with testnet NEAR (at most 2 per contributor in a review window; trivial changes earn nothing).
 
 ## Usage
 
