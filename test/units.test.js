@@ -19,3 +19,9 @@ test("converting there and back gives the same amount", () => {
 test("nearToYocto rejects a negative amount", () => {
     assert.throws(() => nearToYocto("-1"));
 });
+
+test("nearToYocto rejects text that is not a number", () => {
+    assert.throws(() => nearToYocto("1.2.3"), /not a NEAR amount/);
+    assert.throws(() => nearToYocto("abc"), /not a NEAR amount/);
+    assert.throws(() => nearToYocto(""), /not a NEAR amount/);
+});
